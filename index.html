@@ -1,0 +1,100 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <h1 class="header_title">
+                Library Book
+            </h1>
+        </header>
+
+        <main>
+            <section class = "input_list">
+                <h2>Formulir Peminjaman Buku</h2>
+                
+                    <div class = "input">
+                        <label for="inputPeminjam">Nama Peminjam :</label>
+                        <input id="inputPeminjam" type="text" >
+                    </div>
+                    <div class = "input">
+                        <label for="inputIdPeminjam">Id Peminjam :</label>
+                        <input id="inputIdPeminjam" type="number" >
+                    </div>
+                    <div class = "input">
+                        <label for="inputTitle">Judul Buku :</label>
+                        <input id="inputTitle" type="text" >
+                    </div>
+                    <div class = "input">
+                        <label for="inputAuthor">Penulis Buku :</label>
+                        <input id="inputAuthor" type="text">
+                    </div>
+                    <button onclick="submitInput()" id="submitBook" type="submit">Pinjam Buku</button>
+                
+            </section>
+
+            <section id = 'preview' style = 'display: none;'  class = "output_list">
+                <h2>Peminjaman Buku</h2>
+            
+                <section class = "output1">
+    
+                    <div class = "output">
+                        <label  for="outputPeminjam">Nama Peminjam : <span id= "outputPeminjam" ></span></label>       
+                    </div>
+                    <div class = "output">
+                        <label for="outputIdPeminjam">Id Peminjam : <span id= "outputIdPeminjam" ></span></label>         
+                    </div>
+                    <div class = "output">
+                        <label for="outputTitle">Judul Buku :<span id= "outputTitle" ></span></label>
+                    </div>
+                    <div class = "output">
+                        <label for="outputAuthor">Penulis Buku :<span id= "outputAuthor" ></span></label>       
+                    </div>
+                
+                </section>
+            </section>
+
+
+        </main>
+
+        <script >
+            function submitInput() {
+                confirm('Apakah sudah yakin untuk submit ?');
+                outputData();
+            }
+
+            function outputData() {
+                document.querySelector('#preview').style.display = 'block';
+                const inputPeminjam = document.querySelector('#inputPeminjam');
+                const inputIdPeminjam = document.querySelector('#inputIdPeminjam');
+                const inputTitle = document.querySelector('#inputTitle');
+                const inputAuthor = document.querySelector('#inputAuthor');
+
+                // Ambil data input
+                const valueName = inputPeminjam.value;
+                const valueId = inputIdPeminjam.value;
+                const valueTitle = inputTitle.value;
+                const valueAuthor = inputAuthor.value;
+                
+                //Tambah data
+                document.querySelector('#outputPeminjam').innerText =valueName;
+                document.querySelector('#outputIdPeminjam').innerText =valueId;
+                document.querySelector('#outputTitle').innerText =valueTitle;
+                document.querySelector('#outputAuthor').innerText =valueAuthor;
+                
+            };
+           
+        </script>
+
+            
+       
+    </body>
+
+    </html>

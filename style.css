@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 20px;
+}
+.header {
+    padding: 35px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(15, 158, 158);
+    color: white;
+    font-size: 25px;
+}
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+.input_list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.input_list > h2 {
+    text-align: center;
+    color: rgb(19, 19, 19);
+    padding: 20px;
+    font-size: 25px;
+}
+
+.input_list  > .input {
+    margin: 10px 0;
+}
+
+.input_list  > button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(98, 98, 98);
+    border-radius: 10px;
+    color: white;
+    background-color:  rgb(15, 158, 158);
+    font-size: 25px;
+}
+
+.input_list  > .input > label {
+   color:  rgb(15, 158, 158);
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.input_list  > .input > input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid rgb(98, 98, 98);
+    border-radius: 10px;
+}
+
+.output_list {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top : 50px;
+}
+
+.output_list > h2 {
+    text-align: center;
+    color: rgb(19, 19, 19);
+    padding: 1px;
+    font-size: 25px;
+
+}
+
+.output1 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top : 10px;
+    font-size: 20px;
+    
+}
+
